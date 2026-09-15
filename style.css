@@ -1,0 +1,325 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, #7c3aed 0%, transparent 35%),
+        linear-gradient(135deg, #160b2b, #241044, #3b176b);
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.tela {
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo {
+    max-width: 700px;
+    text-align: center;
+}
+
+.tag {
+    color: #d8b4fe;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(40px, 7vw, 70px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #d8b4fe,
+        #a855f7
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.descricao {
+    color: #e9d5ff;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botao {
+    border: none;
+
+    padding: 16px 35px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #9333ea,
+        #c026d3
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 10px 30px rgba(168, 85, 247, 0.35);
+}
+
+.botao:hover {
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow:
+        0 15px 35px rgba(192, 38, 211, 0.5);
+}
+
+/* =========================
+   JOGO
+========================= */
+
+#tela-jogo {
+    display: block;
+}
+
+.topo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    color: #d8b4fe;
+
+    font-size: 14px;
+}
+
+.card-pergunta {
+    background: rgba(18, 8, 35, 0.75);
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    border: 1px solid rgba(216, 180, 254, 0.2);
+
+    text-align: center;
+}
+
+.icone-camera {
+    display: block;
+
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.card-pergunta h2 {
+    font-size: 28px;
+
+    line-height: 1.4;
+
+    margin-bottom: 30px;
+}
+
+/* =========================
+   ALTERNATIVAS
+========================= */
+
+.alternativas {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.alternativa {
+    padding: 18px;
+
+    border: 1px solid #7e22ce;
+
+    border-radius: 15px;
+
+    background: #2e1452;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.alternativa:hover {
+    background: #4c1d95;
+
+    transform: translateY(-2px);
+}
+
+.alternativa.correta {
+    background: #166534;
+
+    border-color: #22c55e;
+}
+
+.alternativa.errada {
+    background: #991b1b;
+
+    border-color: #ef4444;
+}
+
+#resultado {
+    min-height: 30px;
+
+    margin: 25px 0;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+/* =========================
+   TELA FINAL
+========================= */
+
+.final {
+    max-width: 650px;
+}
+
+.mensagem-final {
+    color: #e9d5ff;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+#pontuacao {
+    font-size: 24px;
+
+    color: #d8b4fe;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   CLASSES AUXILIARES
+========================= */
+
+.escondido {
+    display: none !important;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .tela {
+        padding: 25px;
+
+        min-height: 550px;
+
+        border-radius: 20px;
+    }
+
+    .alternativas {
+        grid-template-columns: 1fr;
+    }
+
+    .card-pergunta {
+        padding: 25px;
+    }
+
+    .card-pergunta h2 {
+        font-size: 22px;
+    }
+
+    .topo {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
