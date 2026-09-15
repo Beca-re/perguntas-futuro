@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafio Fotográfico 2049</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Tela inicial -->
+        <section id="tela-inicial" class="tela">
+            <div class="conteudo">
+                <p class="tag">📸 MISSÃO FOTOGRÁFICA</p>
+
+                <h1>Desafio Fotográfico 2049</h1>
+
+                <p class="descricao">
+                    Em 2049, a fotografia se tornou uma das principais formas
+                    de preservar memórias. Sua missão é testar seus conhecimentos
+                    e descobrir como diferentes escolhas podem transformar uma fotografia.
+                </p>
+
+                <button id="btn-iniciar" class="botao">
+                    Iniciar missão
+                </button>
+            </div>
+        </section>
+
+        <!-- Tela das perguntas -->
+        <section id="tela-jogo" class="tela escondido">
+
+            <div class="topo">
+                <p id="progresso">Pergunta 1 de 3</p>
+                <p id="personagem"></p>
+            </div>
+
+            <div class="card-pergunta">
+
+                <span class="icone-camera">📷</span>
+
+                <h2 id="pergunta">
+                    Pergunta
+                </h2>
+
+                <div id="alternativas" class="alternativas"></div>
+
+                <p id="resultado"></p>
+
+                <button id="btn-proxima" class="botao escondido">
+                    Próxima pergunta
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Tela final -->
+        <section id="tela-final" class="tela escondido">
+
+            <div class="conteudo final">
+
+                <p class="tag">✨ MISSÃO CONCLUÍDA</p>
+
+                <h1 id="titulo-final">
+                    Parabéns!
+                </h1>
+
+                <p id="pontuacao">
+                    Você concluiu o desafio.
+                </p>
+
+                <p class="mensagem-final">
+                    Continue explorando a fotografia, experimentando novos
+                    ângulos, luzes e momentos. Uma boa fotografia pode contar
+                    uma história sem precisar de nenhuma palavra.
+                </p>
+
+                <button id="btn-jogar-novamente" class="botao">
+                    Jogar novamente
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
